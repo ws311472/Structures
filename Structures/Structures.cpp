@@ -29,6 +29,18 @@ void PopulateDetails(User *objUserPass, const int *iSizePass)
 	}
 }
 
+void PopulateDetails(User *objUserPass) 
+{
+	cout << "Please enter the name of the user\n";
+	cin >> objUserPass->sName;
+
+	cout << "\nPlease enter your age " << objUserPass->sName;
+	cin >> objUserPass->iAge;
+
+	cout << "\nPlease enter your Height " << objUserPass->sName;
+	cin >> objUserPass->fHeight;
+}
+
 void OutputDetails(User *objUserPass, const int *iSizePass)
 {
 	for (int iCount = 0; iCount < *iSizePass; iCount++)
@@ -81,6 +93,11 @@ int main()
 
 	PopulateDetails(objUser, &iSize);
 	OutputDetails(objUser, &iSize);
+
+	UpdateNumberForAllUsers(objUser, &iSize);
+	CalculateTotalByUser(objUser, &iSize);
+
+	PopulateDetails(&objUser[0]); //Calling one specific user.
 
 	_getch();
 
