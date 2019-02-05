@@ -5,6 +5,9 @@
 
 using namespace std;
 
+/*A data structure is a group of data elements grouped together under one name.
+These data elements, known as members, can have different types and different lengths. */
+
 struct User
 {
 	string sName;
@@ -14,30 +17,32 @@ struct User
 
 };
 
+//Pointers 'point' to specific memory locations.
+
 void PopulateDetails(User *objUserPass, const int *iSizePass)
 {
 	for (int iCount = 0; iCount < *iSizePass; iCount++)
 	{
-		cout << "Please enter the name of the user\n";
+		cout << "Please enter the name of the user" << endl;
 		cin >> objUserPass[iCount].sName;
 
-		cout << "\nPlease enter your age " << objUserPass[iCount].sName;
+		cout << "Please enter your age" << objUserPass[iCount].sName << endl;
 		cin >> objUserPass[iCount].iAge;
 
-		cout << "\nPlease enter your Height " << objUserPass[iCount].sName;
+		cout << "Please enter your Height " << objUserPass[iCount].sName << endl;
 		cin >> objUserPass[iCount].fHeight;
 	}
 }
 
 void PopulateDetails(User *objUserPass) 
 {
-	cout << "Please enter the name of the user\n";
+	cout << "Please enter the name of the user" << endl;
 	cin >> objUserPass->sName;
 
-	cout << "\nPlease enter your age " << objUserPass->sName;
+	cout << "Please enter your age " << objUserPass->sName << endl;
 	cin >> objUserPass->iAge;
 
-	cout << "\nPlease enter your Height " << objUserPass->sName;
+	cout << "Please enter your Height " << objUserPass->sName << endl;
 	cin >> objUserPass->fHeight;
 }
 
@@ -55,11 +60,11 @@ void UpdateNumberForAllUsers(User *objUserPass, const int *iSizePass)
 {
 	for (int iCount = 0; iCount < *iSizePass; iCount++)
 	{
-		cout << "Please enter the numbers for " << objUserPass[iCount].sName;
+		cout << "Please enter the numbers for " << objUserPass[iCount].sName << endl;
 
 		for (int iCount2 = 0; iCount2 < 5; iCount2++)
 		{
-			cout << "\nPlease enter number " << iCount2 + 1;
+			cout << "Please enter number " << iCount2 + 1 << endl;
 			cin >> objUserPass[iCount].iNumbers[iCount2];
 		}
 
@@ -74,14 +79,14 @@ void CalculateTotalByUser(User *objUserPass, const int *iSize)
 	for (int iCount1 = 0; iCount1 < *iSize; iCount1++)
 	{
 		iTotal = 0;
-		cout << "\nCalculating the total for: " << objUserPass[iCount1].sName;
+		cout << "Calculating the total for: " << objUserPass[iCount1].sName << endl;
 
 		for (int iCount2 = 0; iCount2 < 5; iCount2++)
 		{
 			iTotal += objUserPass[iCount1].iNumbers[iCount2];
 		}
 
-		cout << "\nThe total is: " << iTotal;
+		cout << "The total is: " << iTotal << endl;
 	}
 }
 
