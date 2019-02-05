@@ -61,6 +61,7 @@ void CalculateTotalByUser(User *objUserPass, const int *iSize)
 
 	for (int iCount1 = 0; iCount1 < *iSize; iCount1++)
 	{
+		iTotal = 0;
 		cout << "\nCalculating the total for: " << objUserPass[iCount1].sName;
 
 		for (int iCount2 = 0; iCount2 < 5; iCount2++)
@@ -82,32 +83,6 @@ int main()
 	OutputDetails(objUser, &iSize);
 
 	_getch();
-
-
-	/*for (int iCount = 0; iCount < iSize; iCount++)
-	{
-	cout << "Please enter the users name \n";
-	cin >> objUser[iCount].sName;
-
-	cout << "Please enter your age " << objUser[iCount].sName;
-	cin >> objUser[iCount].iAge;
-
-	cout << "Please enter your height" << objUser[iCount].sName;
-	cin >> objUser[iCount].fHeight;
-
-	}*/
-
-	/*cout << "Welcome to the program\n";
-
-	cout << "Please enter the name of the the user\n";
-	cin >> objUser.sName;
-
-	cout << "\nPlease enter your age " << objUser.sName;
-	cin >> objUser.iAge;
-
-	cout << "\nPlease enter your height \n";
-	cin >> objUser.fHeight;*/
-
 
 	return 0;
 }
